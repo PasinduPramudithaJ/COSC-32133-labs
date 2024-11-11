@@ -6,9 +6,9 @@ import com.example.lab2.Service.StudentService;
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
@@ -57,6 +57,18 @@ return existingStudent;
          //delete
         studentRepository.deleteById(id);}
 
+    public List<Student> getStudentsByYearOfEnrollment(String yearOfEnrollment) {
+        return studentRepository.findByYearOfEnrollment(yearOfEnrollment);
+    }
+
+    public Optional<String> getDepartmentById(Long id) {
+        return studentRepository.findDepartmentById(id);
+    }
+
+    public void deleteStudentsByYearOfEnrollment(String year) {
+        studentRepository.deleteStudentsByYearOfEnrollment(year);
+    }
+   
 
     }
     
