@@ -1,6 +1,5 @@
 package com.example.lab2.Model;
 
-import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

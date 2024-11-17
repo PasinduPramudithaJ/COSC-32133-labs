@@ -66,10 +66,10 @@ public ResponseEntity<Student> saveEmployee(@RequestBody Student student){
         }
     }
 
-    @DeleteMapping("/yearDelete/{year}")
-    public ResponseEntity<String> deleteStudentsByYear(@PathVariable("yearOfEnrollment") String year) {
+    @DeleteMapping("/deleteByYear/{year}")
+    public ResponseEntity<String> deleteStudentsByYearOfEnrollment(@PathVariable("year") String year) {
         studentService.deleteStudentsByYearOfEnrollment(year);
-        return new ResponseEntity<>("Students enrolled in year " + year + " deleted successfully.", HttpStatus.OK);
+        return ResponseEntity.ok("Students enrolled in " + year + " have been deleted.");
     }
 
     

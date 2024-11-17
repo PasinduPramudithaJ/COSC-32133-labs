@@ -66,8 +66,10 @@ return existingStudent;
     }
 
     public void deleteStudentsByYearOfEnrollment(String year) {
-        studentRepository.deleteStudentsByYearOfEnrollment(year);
+        studentRepository.delete(year);
     }
+
+   
    
 
     }

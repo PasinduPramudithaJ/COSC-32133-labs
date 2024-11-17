@@ -16,6 +16,6 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     @Transactional
     @Query("DELETE FROM Student s WHERE s.yearOfEnrollment = :year")
-    void deleteStudentsByYearOfEnrollment(String year);
+    void delete(String year);
 
 }
